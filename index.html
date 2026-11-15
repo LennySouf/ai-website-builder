@@ -314,6 +314,48 @@
           Nous contacter <span>↗</span>
         </a>
       </div>
+      
+<form
+  name="contact-nova"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="nova-contact-form"
+>
+  <input type="hidden" name="form-name" value="contact-nova">
+
+  <p hidden>
+    <label>Ne pas remplir : <input name="bot-field"></label>
+  </p>
+
+  <h3>Parlons de votre projet</h3>
+
+  <label for="nova-name">Votre nom</label>
+  <input id="nova-name" type="text" name="nom"
+         placeholder="Votre nom" required>
+
+  <label for="nova-email">Votre adresse e-mail</label>
+  <input id="nova-email" type="email" name="email"
+         placeholder="votre@email.fr" required>
+
+  <label for="nova-project">Type de projet</label>
+  <select id="nova-project" name="type-projet" required>
+    <option value="">Choisissez votre projet</option>
+    <option value="Site vitrine">Site vitrine</option>
+    <option value="Site e-commerce">Site e-commerce</option>
+    <option value="Refonte de site">Refonte de site</option>
+    <option value="Autre">Autre projet</option>
+  </select>
+
+  <label for="nova-message">Votre message</label>
+  <textarea id="nova-message" name="message"
+            rows="5"
+            placeholder="Parlez-nous de votre projet..."
+            required></textarea>
+
+  <button type="submit">Envoyer ma demande ↗</button>
+</form>
+
 
       <div class="contact-decoration">NOVA.</div>
 
