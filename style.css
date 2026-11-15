@@ -943,3 +943,30 @@ h2 span {
         font-size: 17px;
     }
 }
+
+/* Correction de l'accroche NOVA STUDIO */
+
+.hero-content .hero-title span {
+    color: #FFFFFF !important;
+    font-size: clamp(42px, 6vw, 76px) !important;
+    line-height: 1.08;
+}
+
+.hero-content .hero-title span.hero-title-accent {
+    color: #A78BFA !important;
+}
+
+.hero-content .hero-tagline {
+    color: #D4D4DC !important;
+    font-size: 24px !important;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: 12px;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 600px) {
+    .hero-content .hero-tagline {
+        font-size: 19px !important;
+    }
+}
