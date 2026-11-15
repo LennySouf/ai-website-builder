@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PULSE FITNESS, concept de site de coaching sportif créé par NOVA STUDIO.">
+  <title>PULSE FITNESS — Dépasse tes limites</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+    :root {
+      --fond: #0c0d0e;
+      --carte: #191b1d;
+      --orange: #ff6b25;
+      --blanc: #f6f6f4;
+      --gris: #a5a7aa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fond);
+      color: var(--blanc);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .demo {
+      padding: 11px 6%;
+      background: var(--orange);
+      color: #161616;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .entete {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 23px 7%;
+      border-bottom: 1px solid #ffffff1c;
+    }
+
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 31px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    nav {
+      display: flex;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--gris);
+      font-size: 13px;
+      transition: color .3s;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      padding: 100px 8%;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, #0c0d0efc 4%, #0c0d0edb 42%, #0c0d0e44 100%),
+        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+    }
+
+    .hero-contenu {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+    }
+
+    .etiquette {
+      display: inline-block;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(70px, 11vw, 155px);
+      line-height: .86;
+      letter-spacing: -2px;
+      margin: 30px 0;
+    }
+
+    h1 span, h2 span {
+      color: var(--orange);
+    }
+
+    .hero p {
+      max-width: 520px;
+      color: #d1d1d1;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .bouton {
+      display: inline-block;
+      margin-top: 27px;
+      padding: 18px 30px;
+      background: var(--orange);
+      color: #121212;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform .3s, background .3s;
+    }
+
+    .bouton:hover {
+      transform: translateY(-4px);
+      background: #ff914f;
+    }
+
+    .bandeau {
+      padding: 20px 7%;
+      background: var(--orange);
+      color: #141414;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 105px 7%;
+    }
+
+    .titre-section {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: clamp(48px, 6vw, 82px);
+      line-height: 1;
+      margin: 17px 0;
+    }
+
+    .titre-section p,
+    .description {
+      color: var(--gris);
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    .programmes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .programme {
+      background: var(--carte);
+      border: 1px solid #ffffff18;
+      overflow: hidden;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .programme:hover {
+      transform: translateY(-8px);
+      border-color: var(--orange);
+    }
+
+    .programme img {
+      display: block;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      filter: grayscale(35%);
+    }
+
+    .programme-contenu {
+      padding: 30px;
+    }
+
+    .numero {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .programme h3 {
+      font-size: 38px;
+      margin: 15px 0;
+    }
+
+    .programme p {
+      color: var(--gris);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .apropos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+      background: #151719;
+    }
+
+    .apropos img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .apropos p {
+      color: var(--gris);
+      line-height: 1.9;
+    }
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 100%, #ff6b2524, transparent 55%),
+        var(--fond);
+    }
+
+    .contact p {
+      max-width: 580px;
+      margin: 0 auto;
+      color: var(--gris);
+      line-height: 1.9;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 32px 7%;
+      border-top: 1px solid #ffffff1a;
+      color: var(--gris);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .programmes {
+        grid-template-columns: 1fr;
+      }
+
+      .apropos {
+        grid-template-columns: 1fr;
+      }
+
+      .apropos img {
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .entete {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .hero {
+        min-height: 620px;
+        padding: 75px 6%;
+        background-position: 60% center;
+      }
+
+      h1 {
+        font-size: clamp(58px, 16vw, 90px);
+      }
+
+      .section {
+        padding: 75px 6%;
+      }
+
+      .programme img {
+        height: 210px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="demo">
+    Projet fictif de démonstration — Création NOVA STUDIO
+  </div>
+
+  <header class="entete">
+    <a href="#accueil" class="logo">PULSE<span>FITNESS.</span></a>
+
+    <nav aria-label="Navigation principale">
+      <a href="#programmes">Programmes</a>
+      <a href="#apropos">Notre approche</a>
+      <a href="#contact">Découvrir</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-contenu">
+        <span class="etiquette">Concept de coaching sportif</span>
+
+        <h1>
+          DÉPASSE<br>
+          TES <span>LIMITES.</span>
+        </h1>
+
+        <p>
+          La progression commence par une décision.
+          Découvre un univers sportif imaginé pour
+          t'inspirer, te challenger et révéler ton potentiel.
+        </p>
+
+        <a href="#programmes" class="bouton">
+          Découvrir les programmes ↗
+        </a>
+      </div>
+    </section>
+
+    <div class="bandeau">
+      Force • Discipline • Progression • Détermination
+    </div>
+
+    <section class="section" id="programmes">
+      <div class="titre-section">
+        <span class="etiquette">Trouve ton énergie</span>
+        <h2>CHOISIS TON <span>PROGRAMME.</span></h2>
+        <p>
+          Trois univers d'entraînement fictifs pour illustrer
+          une offre de coaching sportif moderne.
+        </p>
+      </div>
+
+      <div class="programmes">
+
+        <article class="programme">
+          <img
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=85"
+            alt="Entraînement de musculation"
+            loading="lazy"
+          >
+
+          <div class="programme-contenu">
+            <span class="numero">01 / PUISSANCE</span>
+            <h3>STRENGTH</h3>
+            <p>
+              Développer sa force, progresser à son rythme
+              et repousser ses objectifs.
+            </p>
+          </div>
+        </article>
+
+        <article class="programme">
+          <img
+            src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85"
+            alt="Sportif pendant une séance de course"
+            loading="lazy"
+          >
+
+          <div class="programme-contenu">
+            <span class="numero">02 / ENDURANCE</span>
+            <h3>PERFORMANCE</h3>
+            <p>
+              Travailler son cardio, améliorer son endurance
+              et retrouver le plaisir du mouvement.
+            </p>
+          </div>
+        </article>
+
+        <article class="programme">
+          <img
+            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85"
+            alt="Séance de remise en forme"
+            loading="lazy"
+          >
+
+          <div class="programme-contenu">
+            <span class="numero">03 / ÉQUILIBRE</span>
+            <h3>FIT & MOVE</h3>
+            <p>
+              Bouger avec confiance, retrouver de l'énergie
+              et adopter une routine active.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section apropos" id="apropos">
+      <img
+        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1100&q=85"
+        alt="Espace d'entraînement sportif"
+        loading="lazy"
+      >
+
+      <div>
+        <span class="etiquette">Une autre vision du sport</span>
+        <h2>PROGRESSE <span>À TON RYTHME.</span></h2>
+
+        <p>
+          PULSE FITNESS est un concept de site imaginé
+          pour une marque de coaching sportif.
+        </p>
+
+        <p>
+          Son design énergique, ses visuels immersifs
+          et ses programmes clairement présentés
+          illustrent une expérience web pensée
+          pour motiver les visiteurs.
+        </p>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <span class="etiquette">Le mouvement commence ici</span>
+
+      <h2>PRÊT À <span>BOUGER ?</span></h2>
+
+      <p>
+        Ce site est une démonstration de design réalisée
+        par NOVA STUDIO. Les programmes présentés
+        sont fictifs et aucune inscription sportive
+        n'est proposée sur cette page.
+      </p>
+
+      <a href="index.html#realisations" class="bouton">
+        Retour à NOVA STUDIO ↗
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© PULSE FITNESS — Concept fictif</span>
+    <span>Design & développement : NOVA STUDIO</span>
+  </footer>
+
+</body>
+</html>
