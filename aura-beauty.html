@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURA BEAUTY, concept de marque de cosmétiques imaginé par NOVA STUDIO.">
+  <title>AURA BEAUTY — La beauté naturellement</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+    :root {
+      --fond: #faf6f1;
+      --rose: #bc8e8b;
+      --rose-clair: #f1e3df;
+      --texte: #332b29;
+      --secondaire: #766a66;
+      --blanc: #fffdfb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fond);
+      color: var(--texte);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .demo {
+      padding: 11px 6%;
+      background: var(--rose-clair);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .entete {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 25px 7%;
+      border-bottom: 1px solid #332b2914;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--rose);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--secondaire);
+      font-size: 13px;
+      transition: color .3s;
+    }
+
+    nav a:hover {
+      color: var(--rose);
+    }
+
+    .hero {
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+      padding: 85px 7%;
+      background:
+        radial-gradient(circle at 10% 20%, #f1e3df, transparent 55%),
+        var(--fond);
+    }
+
+    .etiquette {
+      color: #a67875;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(52px, 6vw, 91px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 25px 0;
+    }
+
+    h1 em, h2 em {
+      color: var(--rose);
+      font-weight: 400;
+    }
+
+    .intro {
+      color: var(--secondaire);
+      line-height: 1.9;
+      font-size: 15px;
+      max-width: 480px;
+    }
+
+    .bouton {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 17px 29px;
+      background: var(--texte);
+      color: var(--blanc);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background .3s, transform .3s;
+    }
+
+    .bouton:hover {
+      background: #a67875;
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      position: relative;
+      min-height: 490px;
+      overflow: hidden;
+      background: var(--rose-clair);
+    }
+
+    .hero-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s;
+    }
+
+    .hero-image:hover img {
+      transform: scale(1.04);
+    }
+
+    .hero-image::after {
+      content: "BEAUTÉ • DOUCEUR • ÉCLAT";
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      padding: 12px 16px;
+      background: #fffdfbe8;
+      color: var(--texte);
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .section {
+      padding: 105px 7%;
+    }
+
+    .titre-section {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    h2 {
+      font-size: clamp(40px, 5vw, 67px);
+      line-height: 1.15;
+      margin: 20px 0;
+    }
+
+    .titre-section p,
+    .histoire p {
+      color: var(--secondaire);
+      line-height: 1.9;
+    }
+
+    .collection {
+      background: var(--blanc);
+    }
+
+    .grille-produits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .produit {
+      background: var(--fond);
+      overflow: hidden;
+      transition: transform .3s;
+    }
+
+    .produit:hover {
+      transform: translateY(-7px);
+    }
+
+    .produit img {
+      display: block;
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      background: var(--rose-clair);
+    }
+
+    .produit-info {
+      padding: 27px;
+    }
+
+    .produit-info span {
+      color: #a67875;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .produit h3 {
+      font-size: 27px;
+      margin: 14px 0;
+    }
+
+    .produit p {
+      color: var(--secondaire);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .histoire {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .histoire img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+    }
+
+    .citation {
+      padding: 100px 7%;
+      background: var(--rose-clair);
+      text-align: center;
+    }
+
+    .citation h2 {
+      max-width: 850px;
+      margin: 20px auto;
+    }
+
+    .citation p {
+      color: var(--secondaire);
+      line-height: 1.9;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .retour {
+      text-align: center;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 35px 7%;
+      border-top: 1px solid #332b291c;
+      color: var(--secondaire);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .histoire {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      .grille-produits {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .entete {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 17px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+        gap: 35px;
+      }
+
+      .hero-image {
+        min-height: 340px;
+      }
+
+      .section {
+        padding: 75px 6%;
+      }
+
+      .produit img {
+        height: 280px;
+      }
+
+      .histoire img {
+        height: 340px;
+      }
+
+      .citation {
+        padding: 75px 6%;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="demo">
+    Projet fictif de démonstration — Création NOVA STUDIO
+  </div>
+
+  <header class="entete">
+    <a href="#accueil" class="logo">AURA <span>BEAUTY</span></a>
+
+    <nav aria-label="Navigation principale">
+      <a href="#collection">Collection</a>
+      <a href="#univers">Notre univers</a>
+      <a href="#inspiration">Inspiration</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div>
+        <span class="etiquette">Concept de beauté naturelle</span>
+
+        <h1>
+          La beauté en toute <em>simplicité.</em>
+        </h1>
+
+        <p class="intro">
+          Un rituel de douceur, une parenthèse pour soi.
+          Découvrez un univers imaginé autour du soin,
+          de l'élégance et de l'éclat naturel.
+        </p>
+
+        <a href="#collection" class="bouton">
+          Découvrir la collection ↗
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85"
+          alt="Produits cosmétiques dans une ambiance douce"
+        >
+      </div>
+    </section>
+
+    <section class="section collection" id="collection">
+      <div class="titre-section">
+        <span class="etiquette">Nos essentiels</span>
+        <h2>Une collection <em>délicate.</em></h2>
+        <p>
+          Trois soins imaginaires pour illustrer une marque
+          de beauté au design minimaliste et raffiné.
+        </p>
+      </div>
+
+      <div class="grille-produits">
+
+        <article class="produit">
+          <img
+            src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=85"
+            alt="Produit de soin cosmétique"
+            loading="lazy"
+          >
+
+          <div class="produit-info">
+            <span>01 / Soin visage</span>
+            <h3>Éclat du matin</h3>
+            <p>
+              Un soin fictif imaginé pour évoquer
+              fraîcheur, douceur et luminosité.
+            </p>
+          </div>
+        </article>
+
+        <article class="produit">
+          <img
+            src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=900&q=85"
+            alt="Présentation d'un produit cosmétique"
+            loading="lazy"
+          >
+
+          <div class="produit-info">
+            <span>02 / Rituel douceur</span>
+            <h3>Voile de soie</h3>
+            <p>
+              Une création fictive évoquant
+              une routine de soin délicate.
+            </p>
+          </div>
+        </article>
+
+        <article class="produit">
+          <img
+            src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=85"
+            alt="Flacons de produits de beauté"
+            loading="lazy"
+          >
+
+          <div class="produit-info">
+            <span>03 / Éclat naturel</span>
+            <h3>Rose lumière</h3>
+            <p>
+              Un univers de soin imaginé
+              autour des notes florales et de l'éclat.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section histoire" id="univers">
+      <img
+        src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1100&q=85"
+        alt="Produits de beauté disposés dans une ambiance élégante"
+        loading="lazy"
+      >
+
+      <div>
+        <span class="etiquette">L'univers AURA</span>
+        <h2>Le charme des <em>petites attentions.</em></h2>
+
+        <p>
+          AURA BEAUTY est un concept de marque imaginé
+          pour mettre en valeur une expérience cosmétique
+          douce et contemporaine.
+        </p>
+
+        <p>
+          Les couleurs naturelles, les photographies
+          lumineuses et la mise en page épurée
+          créent une identité visuelle apaisante.
+        </p>
+      </div>
+    </section>
+
+    <section class="citation" id="inspiration">
+      <span class="etiquette">L'inspiration AURA</span>
+
+      <h2>
+        Chaque jour mérite son instant de <em>douceur.</em>
+      </h2>
+
+      <p>
+        AURA BEAUTY est un projet fictif réalisé par
+        NOVA STUDIO. Les produits présentés sont imaginaires
+        et aucune vente n'est proposée sur ce site.
+      </p>
+    </section>
+
+    <section class="section retour">
+      <span class="etiquette">Une création NOVA STUDIO</span>
+      <h2>Un design pensé pour <em>inspirer.</em></h2>
+
+      <a href="index.html#realisations" class="bouton">
+        Retour à NOVA STUDIO ↗
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© AURA BEAUTY — Concept fictif</span>
+    <span>Design & développement : NOVA STUDIO</span>
+  </footer>
+
+</body>
+</html>
