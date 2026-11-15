@@ -788,3 +788,27 @@ h2 span {
   }
 }
 
+/* NOVA STUDIO — Halo premium sur l'accueil */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: -12%;
+  width: 65%;
+  height: 85%;
+  background: radial-gradient(
+    ellipse,
+    rgba(160, 120, 255, 0.13) 0%,
+    rgba(125, 80, 220, 0.06) 40%,
+    transparent 72%
+  );
+  filter: blur(35px);
+  pointer-events: none;
+  z-index: -1;
+}
