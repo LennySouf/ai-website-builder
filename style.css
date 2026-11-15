@@ -903,3 +903,43 @@ h2 span {
   object-fit: contain;
   filter: drop-shadow(0 10px 22px rgba(151, 85, 255, 0.25));
 }
+
+/* NOVA STUDIO — Nouvelle accroche */
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #FFFFFF;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+    margin-bottom: 18px;
+}
+
+.hero-title span {
+    display: block;
+}
+
+.hero-title .hero-title-accent {
+    color: #A78BFA;
+}
+
+.hero-tagline {
+    color: #D4D4DC;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-tagline {
+        font-size: 17px;
+    }
+}
