@@ -4,149 +4,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#080910">
   <meta name="description" content="NOVA STUDIO crée des sites web modernes, élégants et performants pour les entreprises et entrepreneurs.">
-  <title>NOVA STUDIO | Création de sites web</title>
+
+  <title>NOVA STUDIO | Digital & Creative Studio</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
+  <!-- NAVIGATION -->
+  <header class="header">
     <a href="#" class="logo">NOVA<span>.</span></a>
 
-    <nav>
+    <nav class="navigation">
       <a href="#services">Services</a>
       <a href="#realisations">Réalisations</a>
       <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Contact <span>↗</span></a>
     </nav>
   </header>
 
   <main>
 
-    <section class="hero">
-      <p class="tag">STUDIO DIGITAL & CRÉATIF</p>
+    <!-- HERO -->
+    <section class="hero" id="accueil">
 
-      <h1>
-        Nous créons le web
-        <span>de demain.</span>
-      </h1>
+      <div class="hero-content reveal">
 
-      <p class="intro">
-        Des sites web modernes, élégants et performants
-        pour donner vie à vos projets et développer
-        votre présence en ligne.
-      </p>
+        <p class="tag">
+          <span class="status-dot"></span>
+          STUDIO DIGITAL & CRÉATIF
+        </p>
 
-      <a href="#contact" class="button">
-        Parlons de votre projet →
-      </a>
+        <h1>
+          Nous créons le web
+          <span>de demain.</span>
+        </h1>
+
+        <p class="intro">
+          Des sites web modernes, élégants et performants
+          pour donner vie à vos projets et développer
+          votre présence en ligne.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="button">
+            Parlons de votre projet <span>↗</span>
+          </a>
+
+          <a href="#realisations" class="secondary-link">
+            Découvrir notre univers ↓
+          </a>
+        </div>
+
+        <div class="hero-bottom">
+          <span>DESIGN · CRÉATIVITÉ · DIGITAL</span>
+          <span>INDÉPENDANT & CRÉATIF</span>
+        </div>
+
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="glow-orb"></div>
+
+        <div class="visual-card">
+          <div class="visual-top">
+            <span>NOVA STUDIO</span>
+            <span>✳</span>
+          </div>
+
+          <div class="visual-symbol">N.</div>
+
+          <div class="visual-bottom">
+            <span>DIGITAL EXPERIENCE</span>
+            <span>2026</span>
+          </div>
+        </div>
+
+        <div class="floating-label">
+          <span class="status-dot"></span>
+          Creative vision
+        </div>
+      </div>
+
     </section>
 
-    <section id="services">
-      <p class="tag">CE QUE NOUS FAISONS</p>
-      <h2>Nos services</h2>
+    <!-- SERVICES -->
+    <section id="services" class="section reveal">
+
+      <p class="tag">01 / CE QUE NOUS FAISONS</p>
+
+      <div class="section-heading">
+        <h2>Nos services<span>.</span></h2>
+        <p>Des solutions digitales pensées pour faire grandir vos projets.</p>
+      </div>
 
       <div class="services">
 
-        <article>
-          <h3>01 — Sites web</h3>
+        <article class="service-card">
+          <span class="card-number">01</span>
+          <div class="card-icon">↗</div>
+          <h3>Sites web</h3>
           <p>Des sites modernes, rapides et adaptés à votre activité.</p>
+          <span class="card-arrow">↗</span>
         </article>
 
-        <article>
-          <h3>02 — Design</h3>
+        <article class="service-card">
+          <span class="card-number">02</span>
+          <div class="card-icon">✳</div>
+          <h3>Design</h3>
           <p>Une identité visuelle élégante et mémorable pour votre marque.</p>
+          <span class="card-arrow">↗</span>
         </article>
 
-        <article>
-          <h3>03 — Expérience</h3>
+        <article class="service-card">
+          <span class="card-number">03</span>
+          <div class="card-icon">⌘</div>
+          <h3>Expérience</h3>
           <p>Une navigation intuitive et agréable sur ordinateur, tablette et mobile.</p>
+          <span class="card-arrow">↗</span>
         </article>
 
       </div>
     </section>
 
-    <section id="realisations">
-      <p class="tag">NOTRE SAVOIR-FAIRE</p>
-      <h2>Des idées qui prennent vie.</h2>
+    <!-- REALISATIONS -->
+    <section id="realisations" class="section reveal">
 
-      <p>
-        Nous concevons des expériences web adaptées
-        aux besoins et aux ambitions de chaque projet.
-      </p>
+      <p class="tag">02 / NOTRE SAVOIR-FAIRE</p>
 
-      <div class="services">
-        <article>
-          <h3>Site vitrine</h3>
-          <p>Présentez votre entreprise et vos services avec élégance.</p>
+      <div class="section-heading">
+        <h2>Des idées qui<br><span>prennent vie.</span></h2>
+        <p>Nous concevons des expériences web adaptées aux besoins et aux ambitions de chaque projet.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <article class="portfolio-card portfolio-large">
+          <div class="portfolio-art art-one">
+            <span>N.</span>
+          </div>
+          <div class="portfolio-info">
+            <div>
+              <span>01 / PRÉSENCE DIGITALE</span>
+              <h3>Site vitrine</h3>
+              <p>Présentez votre entreprise et vos services avec élégance.</p>
+            </div>
+            <span class="portfolio-arrow">↗</span>
+          </div>
         </article>
 
-        <article>
-          <h3>Site professionnel</h3>
-          <p>Développez votre image et facilitez le contact avec vos clients.</p>
+        <article class="portfolio-card">
+          <div class="portfolio-art art-two">
+            <span>STUDIO</span>
+          </div>
+          <div class="portfolio-info">
+            <div>
+              <span>02 / IMAGE DE MARQUE</span>
+              <h3>Site professionnel</h3>
+              <p>Développez votre image et facilitez le contact avec vos clients.</p>
+            </div>
+            <span class="portfolio-arrow">↗</span>
+          </div>
         </article>
 
-        <article>
-          <h3>Projet sur mesure</h3>
-          <p>Une solution adaptée à vos objectifs et à votre activité.</p>
+        <article class="portfolio-card">
+          <div class="portfolio-art art-three">
+            <span>IDEAS<br>IN MOTION</span>
+          </div>
+          <div class="portfolio-info">
+            <div>
+              <span>03 / CRÉATION</span>
+              <h3>Projet sur mesure</h3>
+              <p>Une solution adaptée à vos objectifs et à votre activité.</p>
+            </div>
+            <span class="portfolio-arrow">↗</span>
+          </div>
         </article>
+
       </div>
     </section>
 
-    <section id="methode">
-      <p class="tag">COMMENT NOUS TRAVAILLONS</p>
-      <h2>Un projet, trois étapes.</h2>
+    <!-- METHODE -->
+    <section id="methode" class="section reveal">
 
-      <div class="services">
-        <article>
-          <h3>01 — Échange</h3>
+      <p class="tag">03 / COMMENT NOUS TRAVAILLONS</p>
+
+      <div class="section-heading">
+        <h2>Un projet,<br><span>trois étapes.</span></h2>
+      </div>
+
+      <div class="method-grid">
+
+        <article class="method-card">
+          <span>01</span>
+          <h3>Échange</h3>
           <p>Nous découvrons votre activité, vos besoins et vos objectifs.</p>
         </article>
 
-        <article>
-          <h3>02 — Création</h3>
+        <article class="method-card">
+          <span>02</span>
+          <h3>Création</h3>
           <p>Nous concevons un site adapté à votre identité.</p>
         </article>
 
-        <article>
-          <h3>03 — Livraison</h3>
+        <article class="method-card">
+          <span>03</span>
+          <h3>Livraison</h3>
           <p>Nous finalisons votre site et préparons sa mise en ligne.</p>
         </article>
+
       </div>
     </section>
 
-    <section id="apropos">
-      <p class="tag">NOTRE VISION</p>
-      <h2>Le digital, autrement.</h2>
+    <!-- A PROPOS -->
+    <section id="apropos" class="about-section reveal">
 
-      <p>
-        NOVA STUDIO accompagne les entreprises,
-        les indépendants et les entrepreneurs dans
-        leur développement numérique grâce à des
-        expériences web soignées.
-      </p>
+      <div>
+        <p class="tag">04 / NOTRE VISION</p>
+        <h2>Le digital,<br><span>autrement.</span></h2>
+      </div>
+
+      <div class="about-content">
+        <p>
+          NOVA STUDIO accompagne les entreprises,
+          les indépendants et les entrepreneurs dans
+          leur développement numérique grâce à des
+          expériences web soignées.
+        </p>
+
+        <a href="#contact" class="secondary-link">
+          Construisons votre projet ↗
+        </a>
+      </div>
+
     </section>
 
-    <section id="contact">
-      <p class="tag">UN PROJET EN TÊTE ?</p>
-      <h2>Créons quelque chose de grand.</h2>
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section reveal">
 
-      <p>
-        Présentez-nous votre projet et discutons
-        ensemble de vos besoins.
-      </p>
+      <p class="tag">05 / UN PROJET EN TÊTE ?</p>
 
-      <a href="mailto:contact@novastudio.fr" class="button">
-        Nous contacter →
-      </a>
+      <div class="contact-content">
+        <h2>
+          Créons quelque chose
+          <span>de grand.</span>
+        </h2>
+
+        <p>
+          Présentez-nous votre projet et discutons
+          ensemble de vos besoins.
+        </p>
+
+        <a href="mailto:contact@novastudio.fr" class="button">
+          Nous contacter <span>↗</span>
+        </a>
+      </div>
+
+      <div class="contact-decoration">NOVA.</div>
+
     </section>
 
   </main>
 
-  <footer>
-    © 2026 NOVA STUDIO — Tous droits réservés.
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="#" class="logo">NOVA<span>.</span></a>
+
+    <p>© 2026 NOVA STUDIO — Tous droits réservés.</p>
+
+    <a href="#accueil" class="back-top">Retour en haut ↑</a>
   </footer>
+
+  <!-- ANIMATIONS -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
 
 </body>
 </html>
