@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos créations | NOVA STUDIO</title>
+  <meta name="description" content="Découvrez les créations web de NOVA STUDIO.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">NOVA<span>.</span></a>
+
+    <nav class="navigation">
+      <a href="index.html">Accueil</a>
+      <a href="nos-services.html">Nos services</a>
+      <a href="nos-creations.html">Nos créations</a>
+      <a href="notre-methode.html">Notre méthode</a>
+      <a href="contact.html" class="nav-cta">Contact ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 160px;">
+
+      <div class="section-label">02 / NOTRE PORTFOLIO</div>
+
+      <div class="section-heading">
+        <h1>Nos créations<span>.</span></h1>
+        <p>Trois univers, trois identités, une même passion pour le design.</p>
+      </div>
+
+      <div class="nova-creations">
+
+        <a class="nova-creation" href="maison-elegance.html">
+          <img src="maison-elegance-cover.png" alt="Aperçu du site Maison Élégance">
+          <div class="nova-creation-content">
+            <span>01 / SITE VITRINE</span>
+            <h2>Maison Élégance ↗</h2>
+            <p>Un univers raffiné et intemporel.</p>
+          </div>
+        </a>
+
+        <a class="nova-creation" href="pulse-fitness.html">
+          <img src="pulse-fitness-cover.png" alt="Aperçu du site Pulse Fitness">
+          <div class="nova-creation-content">
+            <span>02 / SPORT & FITNESS</span>
+            <h2>Pulse Fitness ↗</h2>
+            <p>Une expérience dynamique et énergique.</p>
+          </div>
+        </a>
+
+        <a class="nova-creation" href="aura-beauty.html">
+          <img src="aura-beauty-cover.png" alt="Aperçu du site Aura Beauty">
+          <div class="nova-creation-content">
+            <span>03 / BEAUTÉ & BIEN-ÊTRE</span>
+            <h2>Aura Beauty ↗</h2>
+            <p>Une identité douce, moderne et élégante.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .nova-creations {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 55px;
+    }
+
+    .nova-creation {
+      display: block;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(168, 132, 255, 0.25);
+      background: linear-gradient(145deg, #19162b, #100e1d);
+      text-decoration: none;
+      color: #f5f0ff;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .nova-creation:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 55px rgba(126, 58, 242, 0.25);
+    }
+
+    .nova-creation img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .nova-creation-content {
+      padding: 28px;
+    }
+
+    .nova-creation-content span {
+      color: #b58aff;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .nova-creation-content h2 {
+      margin: 14px 0;
+      font-size: 25px;
+    }
+
+    .nova-creation-content p {
+      color: #aaa5b8;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 800px) {
+      .nova-creations {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</body>
+</html>
