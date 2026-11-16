@@ -999,3 +999,7 @@ h2 span {
   font-weight: 700;
   box-shadow: 0 4px 18px rgba(145, 75, 255, 0.15);
 }
+/* NOVA STUDIO — Masquer les flèches inutiles */
+.services .service-card .card-arrow {
+  display: none;
+}
