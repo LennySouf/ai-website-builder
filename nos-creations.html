@@ -292,6 +292,37 @@ body > main > .section {
     grid-template-columns: 1fr !important;
   }
 }
+  /* NOVA STUDIO — Mise en page du portfolio */
+
+#creations {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+#creations .nova-creations {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 55px auto 0 !important;
+}
+
+#creations .nova-creation {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 850px) {
+  #creations .nova-creations {
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+  }
+}
 
 </style>
 
