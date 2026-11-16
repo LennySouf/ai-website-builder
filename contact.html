@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | NOVA STUDIO</title>
+  <meta name="description" content="Parlons de votre projet web avec NOVA STUDIO.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-page {
+      min-height: 100vh;
+      padding: 140px 6% 100px;
+      background: radial-gradient(ellipse at 75% 20%, rgba(145, 95, 255, .14), transparent 50%);
+    }
+    .contact-page-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    .contact-page-tag {
+      color: #b48cff;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .contact-page h1 {
+      color: #f5f2ff;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.1;
+      margin: 22px 0;
+    }
+    .contact-page h1 span { color: #a98aff; }
+    .contact-page-intro {
+      color: #aaa5bb;
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 620px;
+      margin-bottom: 55px;
+    }
+    .contact-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-page-info {
+      padding: 35px;
+      border: 1px solid rgba(169, 138, 255, .25);
+      border-radius: 24px;
+      background: rgba(169, 138, 255, .06);
+    }
+    .contact-page-info h2 {
+      color: #fff;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .contact-page-info p {
+      color: #aaa5bb;
+      line-height: 1.9;
+    }
+    .contact-page-form {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      padding: 35px;
+      border: 1px solid rgba(169, 138, 255, .3);
+      border-radius: 24px;
+      background: linear-gradient(145deg, #1b1630, #100e1c);
+    }
+    .contact-page-form h2 {
+      color: #fff;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+    .contact-page-form label {
+      color: #e8e3f3;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .contact-page-form input,
+    .contact-page-form select,
+    .contact-page-form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      border: 1px solid rgba(169, 138, 255, .25);
+      border-radius: 12px;
+      background: #100e1c;
+      color: #fff;
+      font: inherit;
+      margin-bottom: 10px;
+    }
+    .contact-page-form input:focus,
+    .contact-page-form select:focus,
+    .contact-page-form textarea:focus {
+      outline: none;
+      border-color: #b48cff;
+    }
+    .contact-page-form button {
+      padding: 18px;
+      border: 0;
+      border-radius: 12px;
+      background: #a98aff;
+      color: #100e1c;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .contact-page-form button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(169, 138, 255, .35);
+    }
+    @media (max-width: 760px) {
+      .contact-page { padding: 110px 5% 70px; }
+      .contact-page-grid { grid-template-columns: 1fr; }
+      .contact-page-info, .contact-page-form { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">NOVA<span>.</span></a>
+    <nav class="navigation">
+      <a href="nos-services.html">Nos services</a>
+      <a href="nos-creations.html">Nos créations</a>
+      <a href="notre-methode.html">Notre méthode</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <div class="contact-page-inner">
+      <p class="contact-page-tag">04 / FAISONS CONNAISSANCE</p>
+      <h1>Votre projet mérite<br><span>de prendre vie.</span></h1>
+      <p class="contact-page-intro">
+        Une idée, un projet ou simplement une question ?
+        Racontez-nous votre vision. Nous serons ravis
+        d'échanger avec vous.
+      </p>
+
+      <div class="contact-page-grid">
+        <div class="contact-page-info">
+          <h2>Créons quelque chose d'unique. ✦</h2>
+          <p>
+            Chaque projet commence par une conversation.
+            Parlons de vos objectifs et imaginons ensemble
+            une expérience digitale qui vous ressemble.
+          </p>
+        </div>
+
+        <form
+          name="contact-nova"
+          method="POST"
+          action="/merci.html"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-page-form"
+        >
+          <input type="hidden" name="form-name" value="contact-nova">
+
+          <p hidden>
+            <label>Ne pas remplir : <input name="bot-field"></label>
+          </p>
+
+          <h2>Parlons de votre projet</h2>
+
+          <label for="nova-name">Votre nom</label>
+          <input id="nova-name" type="text" name="nom"
+                 placeholder="Votre nom" required>
+
+          <label for="nova-email">Votre adresse e-mail</label>
+          <input id="nova-email" type="email" name="email"
+                 placeholder="votre@email.fr" required>
+
+          <label for="nova-project">Type de projet</label>
+          <select id="nova-project" name="type-projet" required>
+            <option value="">Choisissez votre projet</option>
+            <option value="Site vitrine">Site vitrine</option>
+            <option value="Site e-commerce">Site e-commerce</option>
+            <option value="Refonte de site">Refonte de site</option>
+            <option value="Autre">Autre projet</option>
+          </select>
+
+          <label for="nova-message">Votre message</label>
+          <textarea id="nova-message" name="message" rows="5"
+                    placeholder="Parlez-nous de votre projet..."
+                    required></textarea>
+
+          <button type="submit">Envoyer ma demande ↗</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
