@@ -1003,3 +1003,138 @@ h2 span {
 .services .service-card .card-arrow {
   display: none;
 }
+
+
+
+/* ==========================================
+   NOVA STUDIO — ACCUEIL PREMIUM
+   ========================================== */
+
+/* Ambiance profonde et halos violets */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 88vh;
+  background:
+    radial-gradient(
+      ellipse at 78% 42%,
+      rgba(123, 65, 245, 0.17),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 18% 78%,
+      rgba(92, 52, 185, 0.10),
+      transparent 48%
+    ),
+    #080910;
+}
+
+/* Halo décoratif */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: 12%;
+  right: 3%;
+  border-radius: 50%;
+  background: rgba(145, 91, 255, 0.13);
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Titre plus affirmé */
+.hero .hero-title {
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.hero .hero-title-accent {
+  background: linear-gradient(
+    110deg,
+    #f0e8ff 0%,
+    #bd9aff 45%,
+    #8e62f5 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Texte d'introduction */
+.hero .intro {
+  color: #b9b4c8;
+  line-height: 1.85;
+}
+
+/* Bouton principal */
+.hero .button {
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(130, 80, 255, 0.20);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero .button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 45px rgba(145, 91, 255, 0.35);
+}
+
+/* Lien secondaire */
+.hero .secondary-link {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero .secondary-link:hover {
+  transform: translateY(-3px);
+  color: #d8c6ff;
+}
+
+/* Visuel NOVA */
+.hero .visual-card {
+  border: 1px solid rgba(185, 150, 255, 0.30);
+  box-shadow:
+    0 25px 75px rgba(0, 0, 0, 0.40),
+    0 0 65px rgba(132, 75, 255, 0.15);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.hero .visual-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 35px 85px rgba(0, 0, 0, 0.50),
+    0 0 90px rgba(132, 75, 255, 0.25);
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero::before {
+    width: 280px;
+    height: 280px;
+    right: -80px;
+    top: 20%;
+  }
+
+  .hero .hero-title {
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Respect des préférences d'animation */
+@media (prefers-reduced-motion: reduce) {
+  .hero .button,
+  .hero .secondary-link,
+  .hero .visual-card {
+    transition: none;
+  }
+}
