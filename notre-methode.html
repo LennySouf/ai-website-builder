@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez la méthode de NOVA STUDIO, de la première idée à la mise en ligne de votre site.">
+  <title>Notre méthode | NOVA STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .method-page {
+      padding: 160px 24px 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .method-intro {
+      text-align: center;
+      margin-bottom: 65px;
+    }
+
+    .method-eyebrow {
+      display: inline-block;
+      color: #b58aff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .method-intro h1 {
+      color: #fff;
+      font-size: clamp(42px, 6vw, 76px);
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin: 0 0 24px;
+    }
+
+    .method-intro h1 span {
+      color: #b58aff;
+    }
+
+    .method-intro p {
+      color: #b8b2c8;
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .method-card {
+      position: relative;
+      overflow: hidden;
+      padding: 38px;
+      min-height: 270px;
+      border-radius: 26px;
+      border: 1px solid rgba(181, 138, 255, 0.25);
+      background:
+        radial-gradient(circle at 90% 0%,
+          rgba(148, 80, 255, 0.17), transparent 55%),
+        linear-gradient(145deg, #1b172d, #100e1c);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+      transition: transform 0.35s ease,
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
+    }
+
+    .method-card:hover {
+      transform: translateY(-7px);
+      border-color: #b58aff;
+      box-shadow: 0 20px 55px rgba(126, 58, 242, 0.2);
+    }
+
+    .method-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border-radius: 17px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 19px;
+      background: linear-gradient(135deg, #a56aff, #5730a0);
+      box-shadow: 0 8px 25px rgba(151, 85, 255, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .method-card h2 {
+      color: #fff;
+      font-size: 26px;
+      margin: 0 0 14px;
+    }
+
+    .method-card p {
+      color: #b8b2c8;
+      line-height: 1.8;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .method-footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #b8b2c8;
+    }
+
+    .method-footer a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 16px 28px;
+      border-radius: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      background: linear-gradient(135deg, #9660f5, #6236ba);
+      box-shadow: 0 10px 30px rgba(126, 58, 242, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .method-footer a:hover {
+      transform: translateY(-4px);
+    }
+
+    @media (max-width: 700px) {
+      .method-page {
+        padding: 120px 18px 70px;
+      }
+
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .method-card {
+        min-height: auto;
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">NOVA<span>.</span></a>
+
+    <nav class="navigation">
+      <a href="index.html">Accueil</a>
+      <a href="nos-services.html">Nos services</a>
+      <a href="nos-creations.html">Nos créations</a>
+      <a href="notre-methode.html">Notre méthode</a>
+      <a href="contact.html" class="nav-cta">Contact ↗</a>
+    </nav>
+  </header>
+
+  <main class="method-page">
+    <div class="method-intro">
+      <span class="method-eyebrow">03 / NOTRE PROCESSUS</span>
+      <h1>Notre méthode<span>.</span></h1>
+      <p>
+        De votre première idée jusqu'à la mise en ligne,
+        nous donnons vie à votre projet avec une approche
+        simple, créative et transparente.
+      </p>
+    </div>
+
+    <div class="method-grid">
+      <article class="method-card">
+        <span class="method-number">01</span>
+        <h2>Découverte</h2>
+        <p>
+          Nous échangeons sur votre activité, vos idées
+          et vos objectifs pour comprendre précisément
+          vos besoins.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <span class="method-number">02</span>
+        <h2>Conception</h2>
+        <p>
+          Nous imaginons la structure, l'identité visuelle
+          et les premières maquettes de votre futur site.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <span class="method-number">03</span>
+        <h2>Création</h2>
+        <p>
+          Nous développons votre site avec soin,
+          en travaillant les animations, la navigation
+          et l'affichage sur tous les écrans.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <span class="method-number">04</span>
+        <h2>Lancement</h2>
+        <p>
+          Nous vérifions les derniers détails
+          et préparons la mise en ligne
+          pour vous livrer un site prêt à être découvert.
+        </p>
+      </article>
+    </div>
+
+    <div class="method-footer">
+      <p>Prêt à donner vie à votre projet ?</p>
+      <a href="index.html#contact">Parlons de votre projet ↗</a>
+    </div>
+  </main>
+</body>
+</html>
