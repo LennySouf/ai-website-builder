@@ -19,18 +19,12 @@
   <a href="nos-creations.html">Nos créations</a>
   <a href="notre-methode.html">Notre méthode</a>
   <a href="contact.html" class="nav-cta">Contact</a>
-</nav>
-  </header>
+<section class="section" id="creations" style="padding-top: 160px;">
 
-  <main>
-    <section class="section" style="padding-top: 160px;">
-
-      <div class="section-label">02 / NOTRE PORTFOLIO</div>
-
-      <div class="section-heading">
-        <h1>Nos créations<span>.</span></h1>
-        <p>Trois univers, trois identités, une même passion pour le design.</p>
-      </div>
+  <div class="section-heading nova-page-heading">
+    <h1>Nos créations<span>.</span></h1>
+    <p>Trois univers, trois identités, une même passion pour le design.</p>
+  </div>
 
       <div class="nova-creations">
 
@@ -66,6 +60,55 @@
   </main>
 
   <style>
+    
+/* NOVA STUDIO — Grand titre centré de Nos créations */
+
+#creations .nova-page-heading {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 950px;
+  margin: 0 auto 70px !important;
+}
+
+#creations .nova-page-heading h1 {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  white-space: nowrap;
+  text-align: center !important;
+  font-size: clamp(32px, 6vw, 88px) !important;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  color: #f8f6ff;
+  margin: 0 0 22px !important;
+}
+
+#creations .nova-page-heading h1 span {
+  color: #a78bfa;
+}
+
+#creations .nova-page-heading p {
+  display: block !important;
+  width: 100% !important;
+  max-width: 680px !important;
+  text-align: center !important;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.7;
+  color: #b5aec7;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 600px) {
+  #creations .nova-page-heading {
+    margin-bottom: 45px !important;
+  }
+}
+
     .nova-creations {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
