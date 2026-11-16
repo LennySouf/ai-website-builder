@@ -253,6 +253,46 @@
       padding: 35px 20px;
     }
   }
+  
+/* NOVA — Correction de la mise en page ordinateur */
+
+body {
+  display: block !important;
+  width: 100% !important;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body > .header {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+body > main {
+  display: block !important;
+  width: 100% !important;
+  clear: both;
+}
+
+body > main > .section {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.nova-creations {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 55px auto 0 !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 850px) {
+  .nova-creations {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 
 
