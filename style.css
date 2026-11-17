@@ -1138,3 +1138,10 @@ h2 span {
     transition: none;
   }
 }
+.nova-creation {
+  position: relative;
+}
+
+.nova-creation:hover .card-arrow {
+  opacity: 1;
+}
